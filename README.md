@@ -69,7 +69,7 @@ npm run build && npm run start:production
 | `npm run build` | _Build the application for production_ |
 | `npm run build:watch` | _Build the application with watch mode_ |
 | `npm run clean` | _Clean application build artifacts_ |
-
+ 
 ### 🛢️ Database
 
 | Command | Description |
