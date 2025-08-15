@@ -82,7 +82,7 @@ npm run build && npm run start:production
 | `npm run db:studio` | _Open Prisma Studio (GUI) across all schemas_ |
 | `npm run db:reset` | _Reset database (pull + generate) for all schemas_ |
 
-### 🐳 Docker
+### 🐳 Docker 
 
 | Command | Description |
 | ------- | ----------- |
