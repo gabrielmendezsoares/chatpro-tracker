@@ -76,7 +76,7 @@ export const getHealth = async (): Promise<IResponse.IResponse<IResponseData.IGe
                 }
               } catch (error: unknown) {
                 propertyMap[instanceMap.code] = {
-                  name: instanceMap.title,
+                  name: instanceMap.code,
                   value: 'Offline',
                   isListeningModifiedEvent: true
                 };
