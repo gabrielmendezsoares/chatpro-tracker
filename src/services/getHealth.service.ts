@@ -63,13 +63,13 @@ export const getHealth = async (): Promise<IResponse.IResponse<IResponseData.IGe
   
                 if (instanceStatusMapData.connected) {
                   propertyMap[instanceMap.code] = {
-                    name: instanceMap.title,
+                    name: instanceMap.code,
                     value: 'Online',
                     isListeningModifiedEvent: true
                   };
                 } else {
                   propertyMap[instanceMap.code] = {
-                    name: instanceMap.title,
+                    name: instanceMap.code,
                     value: 'Offline',
                     isListeningModifiedEvent: true
                   };
