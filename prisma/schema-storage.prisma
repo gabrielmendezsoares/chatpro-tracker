@@ -421,17 +421,3 @@ model access_control_whatsapp_events {
   @@index([status], map: "idx_status")
   @@index([updated_at], map: "idx_updated_at")
 }
-
-model chatpro_watcher_instances {
-  id                                 Int      @id @default(autoincrement())
-  code                               String   @unique(map: "code") @db.VarChar(255)
-  token                              Bytes
-  is_chatpro_watcher_instance_active Boolean  @default(false)
-  created_at                         DateTime @default(now()) @db.DateTime(0)
-  updated_at                         DateTime @default(now()) @db.DateTime(0)
-
-  @@index([code], map: "idx_code")
-  @@index([created_at], map: "idx_created_at")
-  @@index([is_chatpro_watcher_instance_active], map: "idx_is_chatpro_watcher_instance_active")
-  @@index([updated_at], map: "idx_updated_at")
-}
