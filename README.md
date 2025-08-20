@@ -1,20 +1,23 @@
-# 👁️ ChatPro Watcher
+# 👁️ ChatPro Tracker
 
 ## 📋 Overview
 
-This service is a dedicated monitoring and recovery layer for ChatPro and its deployed instances. It actively observes instance-level behavior, checks for availability and responsiveness, and takes automated action when issues are detected — such as reloading failed instances.
+This service acts as a real-time monitoring and self-healing layer for ChatPro and its deployed instances. It periodically checks instance availability and operational status by calling official ChatPro APIs, collecting balance data and health status for each configured instance.
 
-Designed for reliability and extensibility, the system operates continuously, ensuring that ChatPro environments remain healthy, responsive, and self-correcting. It also surfaces meaningful signals about ongoing issues, giving operators clear visibility into the system's state without requiring constant manual oversight.
+If any instance is found to be offline or unresponsive, the service detects the issue and reports it clearly, allowing downstream automation or manual intervention. It also captures key runtime metrics (CPU, memory, port, and logging state), ensuring that both system health and third-party instance integrity are continuously visible.
+
+Built with extensibility and automation in mind, this system ensures ChatPro remains available, traceable, and resilient — without requiring constant manual attention.
 
 ### 🎯 Objectives
 
-- Monitor the health and status of ChatPro and all active instances
-- Detect crashes, hangs, or degraded performance in real time
-- Automatically reload or restart failed instances to ensure uptime
-- Surface and log detailed insights about recurring or critical issues
-- Provide integration points for alerts, dashboards, or external tools
-- Support modular deployment in diverse environments
-- Minimize manual intervention through automated recovery workflows
+- Monitor the health and responsiveness of all connected ChatPro instances
+- Check ChatPro user balance and instance connection status via official APIs
+- Detect and report unresponsive or offline instances in real time
+- Collect and expose runtime system metrics (CPU usage, memory, port, log level)
+- Present all status information in a structured, easy-to-parse format
+- Surface clear, actionable indicators for operational teams or automated tooling
+- Enable integration with dashboards, alerts, or recovery workflows
+- Minimize downtime and manual checks through proactive observability
 
 --- 
 
@@ -29,7 +32,7 @@ Designed for reliability and extensibility, the system operates continuously, en
 
 ```bash 
 # Clone & navigate
-git clone <repository-url> && cd chatpro-watcher
+git clone <repository-url> && cd chatpro-tracker
 
 # Configure environment
 cp .env.example .env  # Edit with your settings
