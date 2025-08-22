@@ -15,8 +15,8 @@ export const getHealth = async (): Promise<IResponse.IResponse<IResponseData.IGe
         undefined,
         undefined,
         {
-          email: process.env.CHAT_PRO_EMAIL ?? 'email@gmail.com',
-          senha: process.env.CHAT_PRO_PASSWORD ?? 'password'
+          email: process.env.CHAT_PRO_EMAIL as string,
+          senha: process.env.CHAT_PRO_PASSWORD as string
         },
         (response: Axios.AxiosXHR<any>): string => response.data.token
       )
