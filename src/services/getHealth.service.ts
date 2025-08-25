@@ -39,7 +39,7 @@ export const getHealth = async (): Promise<IResponse.IResponse<IResponseData.IGe
     if (chatProBalanceMap.status === 'fulfilled') {
       const balance = chatProBalanceMap.value.data.user.saldo;
   
-      if (balance) {
+      if (balance !== undefined && balance !== null) {
         propertyMap.balance = {
           name: 'Saldo',
           value: balance
