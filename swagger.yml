@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: 👁️ ChatPro Tracker
-  version: 1.0.4
+  version: 1.0.5
   description: |
     ## 📋 Overview
 
